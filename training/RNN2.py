@@ -3,27 +3,27 @@ import tensorflow as tf
 from tensorflow import keras
 import matplotlib.pyplot as plt
 
-# caricamento dati
+# data loading
 df_input = pd.read_csv("input_DSCOV.csv")
 df_output = pd.read_csv("output_Kp.csv")
 
-# preprocessing: scarta da ogni dataset le righe che hanno un NaN come elemento
+# preprocessing: discard rows with a NaN element in each dataset
 df_input = df_input.dropna()
 df_output = df_output.dropna()
 
-# Concatenazione dei dati assumendo che siano allineati
+# Concatenate data assuming they are aligned
 merged_data = pd.concat([df_input, df_output], axis=1)
 
-# input e output
-x_data = merged_data.values[:, :53]  # prendi solo i dati input
-y_data = merged_data.values[:, -1].reshape(-1, 1)  # prendi l'ultima colonna come output
+# input and output
+x_data = merged_data.values[:, :53]  # take only the input data
+y_data = merged_data.values[:, -1].reshape(-1, 1)  # take the last column as output
 
-# definizione di altri parametri utili
+# defining other useful parameters
 sequence_length = 60*60*72 
 batch_size = 60*60*24 
 train_split = int(0.8 * len(x_data)) 
 
-# dataset di training
+# training dataset
 dataset_train = keras.preprocessing.timeseries_dataset_from_array(
     x_data[:train_split],
     y_data[:train_split],
@@ -32,7 +32,7 @@ dataset_train = keras.preprocessing.timeseries_dataset_from_array(
     batch_size=batch_size,
 )
 
-# dataset di validazione
+# validation dataset
 dataset_val = keras.preprocessing.timeseries_dataset_from_array(
     x_data[train_split:],
     y_data[train_split:],
@@ -41,7 +41,7 @@ dataset_val = keras.preprocessing.timeseries_dataset_from_array(
     batch_size=batch_size,
 )
 
-# modello
+# model
 inputs = keras.layers.Input(shape=(sequence_length, x_data.shape[1]))
 lstm_out = keras.layers.LSTM(32)(inputs)
 outputs = keras.layers.Dense(1)(lstm_out)
@@ -70,7 +70,7 @@ history = model.fit(
     callbacks=[es_callback, modelckpt_callback],
 )
 
-# visualizzazione della loss
+# visualizing the loss
 def visualize_loss(history, title):
     loss = history.history["loss"]
     val_loss = history.history["val_loss"]
@@ -85,4 +85,3 @@ def visualize_loss(history, title):
     plt.show()
 
 visualize_loss(history, "Training and Validation Loss")
-
