@@ -43,6 +43,12 @@ Possible improvements are certainly to add convolutional filters in case you wan
 
 Another improvement is to create a dataset that associates the measurement of a strong magnetic phenomenon with the satellite readings to estimate the delta t between the phenomena on Earth (because the solar wind takes a certain time to reach the ground once it has intercepted the probe), to train the neural network over it and have more accurate predictions on when Kp is high.
 
+
+# REQUIREMENTS
+This type of analysis requires a lot of memory and computing power; accurate predictions require massive training over the entire history of the probe, which cannot be easily performed by common personal computers.
+
+Furthermore, understanding which parameters to use to obtain the best results in the field of machine learning is still an open problem for mathematics and finding the suitable parameters to obtain acceptable validations requires a lot of computing power.
+
 # ABOUT THE TEAM
 
 We are a team of 4 Space Enthusiast: an astrophysicist, a physicist, an astrophotographer and a science communicator. We are all involved in space-related jobs and we're members of our local astronomical association, where we put our effort to spread the knowledge about the universe and space exploration.
