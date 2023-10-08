@@ -1,0 +1,186 @@
+[
+    {
+        "id": "a3c4d3363af9ce57",
+        "type": "tab",
+        "label": "Thyrus Solar Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2a935797a02148a2",
+        "type": "fd-label",
+        "z": "a3c4d3363af9ce57",
+        "fd_container": "675263a8440a43c7",
+        "fd_cols": 1,
+        "fd_rows": 1,
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "",
+        "popup_info": "",
+        "label": "Score:",
+        "color": "",
+        "align": "center",
+        "justify": "right",
+        "weight": "400",
+        "size": "100%",
+        "padding": "4px",
+        "x": 970,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "579a23c31711d393",
+        "type": "mqtt in",
+        "z": "a3c4d3363af9ce57",
+        "name": "",
+        "topic": "thyrus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2db5b8f446b518d1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "c9283338950ab991"
+            ]
+        ]
+    },
+    {
+        "id": "c9283338950ab991",
+        "type": "json",
+        "z": "a3c4d3363af9ce57",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": true,
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "5668a8e015218dc9",
+                "f23e5cd091b67c6d",
+                "df5d3fc7b1f71f65",
+                "8a4a8389c0ba7805",
+                "e3885f2c5b942f09"
+            ]
+        ]
+    },
+    {
+        "id": "5668a8e015218dc9",
+        "type": "change",
+        "z": "a3c4d3363af9ce57",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.kp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 40,
+        "wires": [
+            [
+                "a61c765cf1ca3e7e"
+            ]
+        ]
+    },
+    {
+        "id": "f23e5cd091b67c6d",
+        "type": "change",
+        "z": "a3c4d3363af9ce57",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.pix",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 100,
+        "wires": [
+            [
+                "a777f594d07baace"
+            ]
+        ]
+    },
+    {
+        "id": "df5d3fc7b1f71f65",
+        "type": "change",
+        "z": "a3c4d3363af9ce57",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.status",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 160,
+        "wires": [
+            [
+                "83e01a8e26aec04a"
+            ]
+        ]
+    },
+    {
+        "id": "a61c765cf1ca3e7e",
+        "type": "ui_gauge",
+        "z": "a3c4d3363af9ce57",
+        "name": "",
+        "group": "c7711ccd9e8a79ba",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Kp Index",
+        "label": "Kp",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 740,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "a777f594d07baace",
+        "type": "ui_gauge",
+        "z":
