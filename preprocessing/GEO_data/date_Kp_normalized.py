@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime
 
-file_path = 'output_Kp_normalizzati.dat'
+file_path = 'output_Kp_normalized.dat'
 data = pd.read_csv(file_path, sep=' ', header=None)
 
 def parse_date(row):
@@ -18,4 +18,3 @@ new_data.columns = ['Date', 'Kp']
 print(new_data.head())
 
 new_data.to_csv('output_Kp.csv', index=False)
-
