@@ -35,8 +35,13 @@ Furthermore, this choice opens the way to other considerations, such as the poss
 All this information must be able to be consulted and understood quickly, which is why we have programmed a data visualization and prediction system that could be extremely useful for many stakeholders that depend on space weather, such as the telecommunications industry, space agencies or electricity distribution services.
 
 
-A crucial role in data visualization is that which occurs by crossing telemetry and sensor data with photographic data. The satellite takes images of the earth in raw format and sends it at a level called L0; these shots are extremely sensitive to noise caused by any physical phenomenon of electromagnetic origin. In this way, not only the faults of the scientific data, but all the possible causes of data corruption which allow the predictions of the Kp parameter to be refined.
+A crucial role in data visualization occurs by crossing telemetry and sensor data with photographic data. The satellite takes images of the Earth in raw format and sends it at a level called L0; these shots are extremely sensitive to noise caused by any physical phenomenon with electromagnetic origin. In this way, not only the faults of the scientific data, but all the possible causes of data corruption which allow the predictions of the Kp parameter to be refined.
 
+
+# IMPROVEMENTS
+Possible improvements are certainly to add convolutional filters in case you want to use the raw photographic data from the EPIC camera for more than one reason, the most relevant of which is the reduction of the dimensionality of the data to carry out efficient training, changing and upgrading the topology of the neural network for this job.
+
+Another improvement is to create a dataset that associates the measurement of a strong magnetic phenomenon with the satellite readings to estimate the delta t between the phenomena on Earth (because the solar wind takes a certain time to reach the ground once it has intercepted the probe), to train the neural network over it and have more accurate predictions on when Kp is high.
 
 # ABOUT THE TEAM
 
