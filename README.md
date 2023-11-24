@@ -66,4 +66,4 @@ Visit https://www.spaceappschallenge.org/2023/find-a-team/thyrus-team/ for more.
 The projects that were evaluated to go to the global awards do not have any data, code or results of any relevance, but are full of graphs generated with a sort of data-art using with ChatGPT. This is the answer from our team to NASA's seriousness.
 
 
-![LOGO](logo/nasa1.png) ![LOGO](logo/nasa2.png) ![LOGO](logo/nasa3.png)
+![LOGO1](logo/nasa1.jpg) ![LOGO2](logo/nasa2.jpg) ![LOGO3](logo/nasa3.jpg)
