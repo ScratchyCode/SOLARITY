@@ -53,6 +53,7 @@ This type of analysis requires a lot of memory and computing power; accurate pre
 Furthermore, understanding which parameters to use to obtain the best results in the field of machine learning is still an open problem for mathematics and finding the suitable parameters to obtain acceptable validations requires a lot of computing power.
 
 # ABOUT THE TEAM
+![TEAM](logo_Thyrus.png)
 
 We are a team of 4 Space Enthusiast: an astrophysicist, a physicist, an astrophotographer and a science communicator. We are all involved in space-related jobs and we're members of our local astronomical association, where we put our effort to spread the knowledge about the universe and space exploration.
 
