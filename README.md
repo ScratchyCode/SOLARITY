@@ -71,4 +71,6 @@ This is the answer from our team to NASA's seriousness.
 
 We don't want to win, but we don't want to see projects nominated with fake data and results whose only meaning is aesthetic that remind something about science. Those are useless fake.
 
-![LOGO1](logo/nasa1.jpg) ![LOGO2](logo/nasa2.jpg) ![LOGO3](logo/nasa3.jpg)
+![LOGO1](logo/nasa1.jpg)
+![LOGO2](logo/nasa2.jpg)
+![LOGO3](logo/nasa3.jpg)
