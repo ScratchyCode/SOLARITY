@@ -64,7 +64,9 @@ Visit https://www.spaceappschallenge.org/2023/find-a-team/thyrus-team/ for more.
 
 # CRITICISM TO THE CONTEST
 
-The projects that were evaluated to go to the global awards do not have any data, code or results of any relevance, but are full of graphs generated with a sort of data-art using with ChatGPT. This is the answer from our team to NASA's seriousness.
+The projects that were evaluated to go to the global awards do not have any data, code or results of any relevance, but are full of graphs generated with a sort of data-art using ChatGPT.
+
+This is the answer from our team to NASA's seriousness.
 
 
 We don't want to win, but we don't want to see projects nominated with fake data and results whose only meaning is aesthetic that remind something about science. Those are useless fake.
